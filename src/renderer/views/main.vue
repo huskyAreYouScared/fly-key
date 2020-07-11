@@ -2,21 +2,26 @@
 <template>
   <div class='launch-platform-box cursorPointer selectNone'>
     <i class="iconfont icon-icon_msg launcher"></i>
+    <flyKey :data="keyData"/>
   </div>
 </template>
 
 <script>
 import { remote, ipcRenderer } from 'electron'
+import flyKey from '@/views/flykey'
 export default {
   name: 'launch-platform',
-  components: {},
+  components: {
+    flyKey
+  },
   data () {
     return {
       dragging: false,
       wX: -1,
       wY: -1,
       screenX: -1,
-      screenY: -1
+      screenY: -1,
+      keyData: []
     }
   },
   computed: {},
@@ -37,9 +42,9 @@ export default {
         const yLoc = e.screenY - this.wY
         remote.BrowserWindow.getFocusedWindow().setBounds({
           x: xLoc,
-          y: yLoc,
-          width: 64,
-          height: 64
+          y: yLoc
+          // width: 64,
+          // height: 64
         })
       }
     },
@@ -47,7 +52,7 @@ export default {
       this.dragging = false
       if (this.screenX === e.screenX && this.screenY === e.screenY) {
         if (e.button === 0) { // left mouse
-          this.openUploadWindow()
+          this.openKeyShowWindow()
         } else {
           this.openContextMenu()
         }
@@ -55,6 +60,9 @@ export default {
     },
     openContextMenu () {
       this.menu.popup()
+    },
+    openKeyShowWindow () {
+      ipcRenderer.send('fly-window', null)
     },
     buildMenu () {
       const template = [
@@ -85,7 +93,10 @@ export default {
     window.addEventListener('mouseup', this.handleMouseUp, false)
     this.buildMenu()
     ipcRenderer.on('keyboard-change', (event, data) => {
-      console.log(data)
+      if (this.keyData.length > 10) {
+        this.keyData.shift(data)
+      }
+      this.keyData.push(data)
     })
   },
   beforeDestroy () {

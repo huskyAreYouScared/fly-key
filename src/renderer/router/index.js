@@ -11,6 +11,11 @@ export default new Router({
       component: require('@/views/main').default
     },
     {
+      path: '/flyKey',
+      name: 'fly-key',
+      component: require('@/views/flyKey').default
+    },
+    {
       path: '*',
       redirect: '/'
     }
