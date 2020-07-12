@@ -8,7 +8,7 @@
       class="animate key-fly-skin" 
       :key="index"
     >
-      {{item|keyFlyFilter}}
+      {{item|keyFlyFilter(isEncrypt)}}
     </p>
   </div>
 </template>
@@ -26,14 +26,22 @@ export default {
     limit: {
       type: Number,
       default: 5
+    },
+    isEncrypt: {
+      type: Boolean,
+      default: false
     }
   },
   filters: {
-    keyFlyFilter (data) {
-      if (data.type === 'keyup') {
-        return keyMap['keyup-' + data.keycode]
+    keyFlyFilter (data, isEncrypt) {
+      if (!isEncrypt) {
+        if (data.type === 'keyup') {
+          return keyMap['keyup-' + data.keycode]
+        } else {
+          return keyMap['mouseup-' + data.button]
+        }
       } else {
-        return keyMap['mouseup-' + data.button]
+        return '****'
       }
     }
   },
@@ -42,7 +50,6 @@ export default {
       currentTimeout: null
     }
   },
-  computed: {},
   watch: {
     data: {
       handler: function () {
@@ -64,7 +71,6 @@ export default {
 }
 </script>
 <style lang='scss' scoped>
-
 .animateWrap {
   position: absolute;
   bottom: 3%;
@@ -97,13 +103,21 @@ export default {
   }
 }
 .key-fly-skin{
+  transition: all 1s;
   margin-bottom: 10px;
-  display: block;
+  display: inline-block;
   text-align: var(--key-fly-text-align);
   min-width: var(--key-fly-min-width);
   font-size: var(--key-fly-font-size);
   color: var(--primary);
-  background: var(--key-fly-bg);
+  background: var(--bg);
   border-radius: var(--key-fly-border-radius);
+  font-weight: bold;
+  box-shadow: 0px 0px 10px 2px inset var(--primary);
+}
+
+.key-fly-skin:hover{
+  perspective: 600;
+  transform: rotateY(360deg);
 }
 </style>
