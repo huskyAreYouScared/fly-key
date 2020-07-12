@@ -1,3 +1,7 @@
+# [0.2.0](https://github.com/huskyAreYouScared/fly-key/compare/v0.1.0...v0.2.0) (2020-07-12)
+
+
+
 # 0.1.0 (2020-07-12)
 
 
