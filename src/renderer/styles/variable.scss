@@ -1,3 +1,15 @@
 :root{
-  --primary:#a68ff7;
+  // key-fly
+  --primary:#ffffff;
+  --key-fly-font-size: calc(var(--key-fly-min-width) / 8);
+  --key-fly-bg: #a68ff76c;
+  --key-fly-border-radius: 10px;
+  --key-fly-min-width: 150px;
+  --key-fly-text-align: center;
+
+  // launcher
+  --launcher-color:#a68ff7;
+
+  // animate-container
+  --left-offset: 64px;
 }

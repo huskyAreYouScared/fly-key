@@ -1,8 +1,11 @@
 <!-- 回显主页 -->
 <template>
   <div class='launch-platform-box cursorPointer selectNone'>
-    <i class="iconfont icon-icon_msg launcher"></i>
-    <flyKey :data="keyData"/>
+    <flyKey :limit="keyLimit" :data="keyData"/>
+    <transition name="launcher-fade">
+      <div v-if="keyFlyVisible" class="iconfont icon-icon_msg launcher"></div>
+    </transition>
+    
   </div>
 </template>
 
@@ -21,7 +24,9 @@ export default {
       wY: -1,
       screenX: -1,
       screenY: -1,
-      keyData: []
+      keyData: [],
+      keyLimit: 7,
+      keyFlyVisible: true
     }
   },
   computed: {},
@@ -43,8 +48,6 @@ export default {
         remote.BrowserWindow.getFocusedWindow().setBounds({
           x: xLoc,
           y: yLoc
-          // width: 64,
-          // height: 64
         })
       }
     },
@@ -52,7 +55,7 @@ export default {
       this.dragging = false
       if (this.screenX === e.screenX && this.screenY === e.screenY) {
         if (e.button === 0) { // left mouse
-          this.openKeyShowWindow()
+          // this.openKeyShowWindow()
         } else {
           this.openContextMenu()
         }
@@ -93,7 +96,11 @@ export default {
     window.addEventListener('mouseup', this.handleMouseUp, false)
     this.buildMenu()
     ipcRenderer.on('keyboard-change', (event, data) => {
-      if (this.keyData.length > 10) {
+      this.keyFlyVisible = false
+      this.$nextTick(() => {
+        this.keyFlyVisible = true
+      })
+      if (this.keyData.length >= this.keyLimit) {
         this.keyData.shift(data)
       }
       this.keyData.push(data)
@@ -110,11 +117,25 @@ export default {
 .launch-platform-box{
   width: 100vw;
   height: 100vh;
+  box-sizing: border-box;
+  border:1px dashed #fff;
+  border-radius: 10px;
   .launcher{
     font-size: 3rem;
     text-align: center;
     line-height: 64px;
-    color: var(--primary);
+    display: block;
+    color: var(--launcher-color);
+    position: absolute;
+    bottom: 0;
   }
+}
+
+
+.launcher-fade-enter-active, .launcher-fade-leave-active {
+  transform: translateX(20px);
+}
+.launcher-fade-enter, .launcher-fade-leave-to  {
+  transform: translateX(0px);;
 }
 </style>
