@@ -117,6 +117,7 @@ export default {
       this.$nextTick(() => {
         this.keyFlyVisible = true
       })
+      console.log(data)
       if (this.keyData.length >= this.keyLimit) {
         this.keyData.shift(data)
       }

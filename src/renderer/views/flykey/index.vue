@@ -15,6 +15,7 @@
 
 <script>
 import { keyMap } from '@/config/keyMap.js'
+import os from 'os'
 export default {
   props: {
     data: {
@@ -36,9 +37,9 @@ export default {
     keyFlyFilter (data, isEncrypt) {
       if (!isEncrypt) {
         if (data.type === 'keyup') {
-          return keyMap['keyup-' + data.keycode]
+          return keyMap[os.platform]['keyup-' + data.keycode]
         } else {
-          return keyMap['mouseup-' + data.button]
+          return keyMap[os.platform]['mouseup-' + data.button]
         }
       } else {
         return '****'
@@ -49,6 +50,9 @@ export default {
     return {
       currentTimeout: null
     }
+  },
+  mounted () {
+    console.log(os.platform)
   },
   watch: {
     data: {

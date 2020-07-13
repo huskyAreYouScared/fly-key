@@ -32,7 +32,6 @@ function createWindow () {
     skipTaskbar: true,
     resizable: false,
     transparent: process.platform !== 'linux',
-    icon: `${__static}/logo.png`,
     webPreferences: {
       backgroundThrottling: false,
       nodeIntegration: true,
