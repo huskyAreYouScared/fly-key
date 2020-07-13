@@ -1,13 +1,13 @@
 import ioHook from 'iohook'
 
 let registerKeyUp = function (browserWindow) {
-  ioHook.on('keyup', (event) => {
+  ioHook.on('keydown', (event) => {
     browserWindow.webContents.send('keyboard-change', event)
   })
   ioHook.start()
 }
 let registerMouseUp = function (browserWindow) {
-  ioHook.on('mouseup', (event) => {
+  ioHook.on('mousedown', (event) => {
     browserWindow.webContents.send('keyboard-change', event)
   })
   ioHook.start()

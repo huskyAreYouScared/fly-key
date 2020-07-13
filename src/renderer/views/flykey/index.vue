@@ -8,7 +8,7 @@
       class="animate key-fly-skin" 
       :key="index"
     >
-      {{item|keyFlyFilter(isEncrypt)}}
+      {{item|keyFlyFilter(isEncrypt, connectedMap)}}
     </p>
   </div>
 </template>
@@ -34,12 +34,17 @@ export default {
     }
   },
   filters: {
-    keyFlyFilter (data, isEncrypt) {
+    keyFlyFilter (data, isEncrypt, connectedMap) {
+      let platform = os.platform
       if (!isEncrypt) {
-        if (data.type === 'keyup') {
-          return keyMap[os.platform]['keyup-' + data.keycode]
+        if (data.type === 'keydown') {
+          return `${data.shiftKey && ![42, 54].includes(data.keycode) ? connectedMap[platform]['shiftKey'] + ' +' : ''}
+          ${data.ctrlKey && ![29, 3613].includes(data.keycode) ? connectedMap[platform]['ctrlKey'] + ' +' : ''}
+          ${data.altKey && ![56, 3640].includes(data.keycode) ? connectedMap[platform]['altKey'] + ' +' : ''}
+          ${data.metaKey && ![3675, 3676].includes(data.keycode) ? connectedMap[platform]['metaKey'] + ' +' : ''}
+          ${keyMap[platform]['keydown-' + data.keycode]}`
         } else {
-          return keyMap[os.platform]['mouseup-' + data.button]
+          return keyMap[platform]['mousedown-' + data.button]
         }
       } else {
         return '****'
@@ -48,7 +53,21 @@ export default {
   },
   data () {
     return {
-      currentTimeout: null
+      currentTimeout: null,
+      connectedMap: {
+        darwin: {
+          shiftKey: 'Shift',
+          altKey: 'Option',
+          ctrlKey: 'Ctrl',
+          metaKey: 'Command'
+        },
+        win32: {
+          shiftKey: 'Shift',
+          altKey: 'Alt',
+          ctrlKey: 'Ctrl',
+          metaKey: '*'
+        }
+      }
     }
   },
   mounted () {

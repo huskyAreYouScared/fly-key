@@ -1,3 +1,17 @@
+## [0.1.4](https://github.com/huskyAreYouScared/fly-key/compare/v0.1.0...v0.1.5) (2020-07-13)
+
+
+### Bug Fixes
+
+* **keymap,flykey:** fix mac keyboard part show error ([5a4c3c7](https://github.com/huskyAreYouScared/fly-key/commit/5a4c3c7dc0baacccb2f3704c7bedc97387adcde0))
+
+
+### Features
+
+* **keymap,flykey:** optimize key map,add shortcut key show ([7787891](https://github.com/huskyAreYouScared/fly-key/commit/7787891c29284a174efeb0086ac54efda4d2421b))
+
+
+
 # 0.1.0 (2020-07-12)
 
 

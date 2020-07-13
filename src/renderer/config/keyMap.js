@@ -1,409 +1,409 @@
 export let keyMap = {
   darwin: {
-    'mouseup-1': '左键',
+    'mousedown-1': '左键',
 
-    'mouseup-2': '右键',
+    'mousedown-2': '右键',
 
-    'mouseup-3': '中键',
+    'mousedown-3': '中键',
 
-    'keyup-1': 'ESC',
+    'keydown-1': 'ESC',
 
-    'keyup-2': '1',
+    'keydown-2': '1',
 
-    'keyup-3': '2',
+    'keydown-3': '2',
 
-    'keyup-4': '3',
+    'keydown-4': '3',
 
-    'keyup-5': '4',
+    'keydown-5': '4',
 
-    'keyup-6': '5',
+    'keydown-6': '5',
 
-    'keyup-7': '6',
+    'keydown-7': '6',
 
-    'keyup-8': '7',
+    'keydown-8': '7',
 
-    'keyup-9': '8',
+    'keydown-9': '8',
 
-    'keyup-10': '9',
+    'keydown-10': '9',
 
-    'keyup-11': '0',
+    'keydown-11': '0',
 
-    'keyup-12': '-',
+    'keydown-12': '-',
 
-    'keyup-13': '=',
+    'keydown-13': '=',
 
-    'keyup-14': 'Backspace',
+    'keydown-14': 'Backspace',
 
-    'keyup-15': 'TAB',
+    'keydown-15': 'TAB',
 
-    'keyup-16': 'Q',
+    'keydown-16': 'Q',
 
-    'keyup-17': 'W',
+    'keydown-17': 'W',
 
-    'keyup-18': 'E',
+    'keydown-18': 'E',
 
-    'keyup-19': 'R',
+    'keydown-19': 'R',
 
-    'keyup-20': 'T',
+    'keydown-20': 'T',
 
-    'keyup-21': 'Y',
+    'keydown-21': 'Y',
 
-    'keyup-22': 'U',
+    'keydown-22': 'U',
 
-    'keyup-23': 'I',
+    'keydown-23': 'I',
 
-    'keyup-24': 'O',
+    'keydown-24': 'O',
 
-    'keyup-25': 'P',
+    'keydown-25': 'P',
 
-    'keyup-26': '[',
+    'keydown-26': '[',
 
-    'keyup-27': ']',
+    'keydown-27': ']',
 
-    'keyup-28': 'Enter',
+    'keydown-28': 'Enter',
 
-    'keyup-29': 'LEFT CTRL',
+    'keydown-29': 'Ctrl',
 
-    'keyup-30': 'A',
+    'keydown-30': 'A',
 
-    'keyup-31': 'S',
+    'keydown-31': 'S',
 
-    'keyup-32': 'D',
+    'keydown-32': 'D',
 
-    'keyup-33': 'F',
+    'keydown-33': 'F',
 
-    'keyup-34': 'G',
+    'keydown-34': 'G',
 
-    'keyup-35': 'H',
+    'keydown-35': 'H',
 
-    'keyup-36': 'J',
+    'keydown-36': 'J',
 
-    'keyup-37': 'K',
+    'keydown-37': 'K',
 
-    'keyup-38': 'L',
+    'keydown-38': 'L',
 
-    'keyup-39': ';',
+    'keydown-39': ';',
 
-    'keyup-40': "'",
+    'keydown-40': "'",
 
-    'keyup-41': '~',
+    'keydown-41': '~',
 
-    'keyup-42': 'LEFT SHIFT',
+    'keydown-42': 'Shift',
 
-    'keyup-43': '\\',
+    'keydown-43': '\\',
 
-    'keyup-44': 'Z',
+    'keydown-44': 'Z',
 
-    'keyup-45': 'X',
+    'keydown-45': 'X',
 
-    'keyup-46': 'C',
+    'keydown-46': 'C',
 
-    'keyup-47': 'V',
+    'keydown-47': 'V',
 
-    'keyup-48': 'B',
+    'keydown-48': 'B',
 
-    'keyup-49': 'N',
+    'keydown-49': 'N',
 
-    'keyup-50': 'M',
+    'keydown-50': 'M',
 
-    'keyup-51': ',',
+    'keydown-51': ',',
 
-    'keyup-52': '.',
+    'keydown-52': '.',
 
-    'keyup-53': '/',
+    'keydown-53': '/',
 
-    'keyup-54': 'RIGHT SHIFT',
+    'keydown-54': 'Shift',
 
-    'keyup-55': '*',
+    'keydown-55': '*',
 
-    'keyup-56': 'LEFT OPTION',
+    'keydown-56': 'Option',
 
-    'keyup-57': 'SPACE',
+    'keydown-57': 'Space',
 
-    'keyup-58': 'CAPS-LOCK',
+    'keydown-58': 'CAPS-LOCK',
 
-    'keyup-59': 'F1',
+    'keydown-59': 'F1',
 
-    'keyup-60': 'F2',
+    'keydown-60': 'F2',
 
-    'keyup-61': 'F3',
+    'keydown-61': 'F3',
 
-    'keyup-62': 'F4',
+    'keydown-62': 'F4',
 
-    'keyup-63': 'F5',
+    'keydown-63': 'F5',
 
-    'keyup-64': 'F6',
+    'keydown-64': 'F6',
 
-    'keyup-65': 'F7',
+    'keydown-65': 'F7',
 
-    'keyup-66': 'F8',
+    'keydown-66': 'F8',
 
-    'keyup-67': 'F9',
+    'keydown-67': 'F9',
 
-    'keyup-68': 'F10',
+    'keydown-68': 'F10',
 
-    'keyup-71': '7',
+    'keydown-71': '7',
 
-    'keyup-72': '8',
+    'keydown-72': '8',
 
-    'keyup-73': '9456',
+    'keydown-73': '9',
 
-    'keyup-74': '-',
+    'keydown-74': '-',
 
-    'keyup-75': '4',
+    'keydown-75': '4',
 
-    'keyup-76': '5',
+    'keydown-76': '5',
 
-    'keyup-77': '6',
+    'keydown-77': '6',
 
-    'keyup-78': '+',
+    'keydown-78': '+',
 
-    'keyup-79': '1',
+    'keydown-79': '1',
 
-    'keyup-80': '2',
+    'keydown-80': '2',
 
-    'keyup-81': '3',
+    'keydown-81': '3',
 
-    'keyup-82': '0',
+    'keydown-82': '0',
 
-    'keyup-83': '.',
+    'keydown-83': '.',
 
-    'keyup-87': 'F11',
+    'keydown-87': 'F11',
 
-    'keyup-88': 'F12',
+    'keydown-88': 'F12',
 
-    'keyup-3612': 'SMALL ENTER',
+    'keydown-3612': 'Small Enter',
 
-    'keyup-3613': 'RIGHT CTRL',
+    'keydown-3613': 'Ctrl',
 
-    'keyup-3637': '/',
+    'keydown-3637': '/',
 
-    'keyup-3639': 'PrtSc',
+    'keydown-3639': 'PrtSc',
 
-    'keyup-3640': 'RIGHT OPTION',
+    'keydown-3640': 'Option',
 
-    'keyup-3653': 'PAUSE',
+    'keydown-3653': 'PAUSE',
 
-    'keyup-3675': 'LEFT COMMAND',
+    'keydown-3675': 'Command',
 
-    'keyup-3676': 'RIGHT COMMAND',
+    'keydown-3676': 'Command',
 
-    'keyup-57416': 'UP',
+    'keydown-57416': 'UP',
 
-    'keyup-57419': 'LEFT',
+    'keydown-57419': 'LEFT',
 
-    'keyup-57421': 'RIGHT',
+    'keydown-57421': 'RIGHT',
 
-    'keyup-61001': 'PAGE UP',
+    'keydown-61001': 'PAGE UP',
 
-    'keyup-57424': 'DOWN',
+    'keydown-57424': 'DOWN',
 
-    'keyup-61009': 'PAGE DOWN',
+    'keydown-61009': 'PAGE DOWN',
 
-    'keyup-61011': 'DELETE'
+    'keydown-61011': 'DELETE'
   },
   win32: {
-    'mouseup-1': '左键',
+    'mousedown-1': '左键',
 
-    'mouseup-2': '右键',
+    'mousedown-2': '右键',
 
-    'mouseup-3': '中键',
+    'mousedown-3': '中键',
 
-    'keyup-1': 'ESC',
+    'keydown-1': 'ESC',
 
-    'keyup-2': '1',
+    'keydown-2': '1',
 
-    'keyup-3': '2',
+    'keydown-3': '2',
 
-    'keyup-4': '3',
+    'keydown-4': '3',
 
-    'keyup-5': '4',
+    'keydown-5': '4',
 
-    'keyup-6': '5',
+    'keydown-6': '5',
 
-    'keyup-7': '6',
+    'keydown-7': '6',
 
-    'keyup-8': '7',
+    'keydown-8': '7',
 
-    'keyup-9': '8',
+    'keydown-9': '8',
 
-    'keyup-10': '9',
+    'keydown-10': '9',
 
-    'keyup-11': '0',
+    'keydown-11': '0',
 
-    'keyup-12': '-',
+    'keydown-12': '-',
 
-    'keyup-13': '=',
+    'keydown-13': '=',
 
-    'keyup-14': 'Backspace',
+    'keydown-14': 'Backspace',
 
-    'keyup-15': 'TAB',
+    'keydown-15': 'TAB',
 
-    'keyup-16': 'Q',
+    'keydown-16': 'Q',
 
-    'keyup-17': 'W',
+    'keydown-17': 'W',
 
-    'keyup-18': 'E',
+    'keydown-18': 'E',
 
-    'keyup-19': 'R',
+    'keydown-19': 'R',
 
-    'keyup-20': 'T',
+    'keydown-20': 'T',
 
-    'keyup-21': 'Y',
+    'keydown-21': 'Y',
 
-    'keyup-22': 'U',
+    'keydown-22': 'U',
 
-    'keyup-23': 'I',
+    'keydown-23': 'I',
 
-    'keyup-24': 'O',
+    'keydown-24': 'O',
 
-    'keyup-25': 'P',
+    'keydown-25': 'P',
 
-    'keyup-26': '[',
+    'keydown-26': '[',
 
-    'keyup-27': ']',
+    'keydown-27': ']',
 
-    'keyup-28': 'Enter',
+    'keydown-28': 'Enter',
 
-    'keyup-29': 'LEFT CTRL',
+    'keydown-29': 'Ctrl',
 
-    'keyup-30': 'A',
+    'keydown-30': 'A',
 
-    'keyup-31': 'S',
+    'keydown-31': 'S',
 
-    'keyup-32': 'D',
+    'keydown-32': 'D',
 
-    'keyup-33': 'F',
+    'keydown-33': 'F',
 
-    'keyup-34': 'G',
+    'keydown-34': 'G',
 
-    'keyup-35': 'H',
+    'keydown-35': 'H',
 
-    'keyup-36': 'J',
+    'keydown-36': 'J',
 
-    'keyup-37': 'K',
+    'keydown-37': 'K',
 
-    'keyup-38': 'L',
+    'keydown-38': 'L',
 
-    'keyup-39': ';',
+    'keydown-39': ';',
 
-    'keyup-40': "'",
+    'keydown-40': "'",
 
-    'keyup-41': '~',
+    'keydown-41': '~',
 
-    'keyup-42': 'LEFT SHIFT',
+    'keydown-42': 'Shift',
 
-    'keyup-43': '\\',
+    'keydown-43': '\\',
 
-    'keyup-44': 'Z',
+    'keydown-44': 'Z',
 
-    'keyup-45': 'X',
+    'keydown-45': 'X',
 
-    'keyup-46': 'C',
+    'keydown-46': 'C',
 
-    'keyup-47': 'V',
+    'keydown-47': 'V',
 
-    'keyup-48': 'B',
+    'keydown-48': 'B',
 
-    'keyup-49': 'N',
+    'keydown-49': 'N',
 
-    'keyup-50': 'M',
+    'keydown-50': 'M',
 
-    'keyup-51': ',',
+    'keydown-51': ',',
 
-    'keyup-52': '.',
+    'keydown-52': '.',
 
-    'keyup-53': '/',
+    'keydown-53': '/',
 
-    'keyup-54': 'RIGHT SHIFT',
+    'keydown-54': 'Shift',
 
-    'keyup-55': '*',
+    'keydown-55': '*',
 
-    'keyup-56': 'LEFT ALT',
+    'keydown-56': 'Alt',
 
-    'keyup-57': 'SPACE',
+    'keydown-57': 'Space',
 
-    'keyup-58': 'CAPS-LOCK',
+    'keydown-58': 'CAPS-LOCK',
 
-    'keyup-59': 'F1',
+    'keydown-59': 'F1',
 
-    'keyup-60': 'F2',
+    'keydown-60': 'F2',
 
-    'keyup-61': 'F3',
+    'keydown-61': 'F3',
 
-    'keyup-62': 'F4',
+    'keydown-62': 'F4',
 
-    'keyup-63': 'F5',
+    'keydown-63': 'F5',
 
-    'keyup-64': 'F6',
+    'keydown-64': 'F6',
 
-    'keyup-65': 'F7',
+    'keydown-65': 'F7',
 
-    'keyup-66': 'F8',
+    'keydown-66': 'F8',
 
-    'keyup-67': 'F9',
+    'keydown-67': 'F9',
 
-    'keyup-68': 'F10',
+    'keydown-68': 'F10',
 
-    'keyup-71': '7',
+    'keydown-71': '7',
 
-    'keyup-72': '8',
+    'keydown-72': '8',
 
-    'keyup-73': '9456',
+    'keydown-73': '9',
 
-    'keyup-74': '-',
+    'keydown-74': '-',
 
-    'keyup-75': '4',
+    'keydown-75': '4',
 
-    'keyup-76': '5',
+    'keydown-76': '5',
 
-    'keyup-77': '6',
+    'keydown-77': '6',
 
-    'keyup-78': '+',
+    'keydown-78': '+',
 
-    'keyup-79': '1',
+    'keydown-79': '1',
 
-    'keyup-80': '2',
+    'keydown-80': '2',
 
-    'keyup-81': '3',
+    'keydown-81': '3',
 
-    'keyup-82': '0',
+    'keydown-82': '0',
 
-    'keyup-83': '.',
+    'keydown-83': '.',
 
-    'keyup-87': 'F11',
+    'keydown-87': 'F11',
 
-    'keyup-88': 'F12',
+    'keydown-88': 'F12',
 
-    'keyup-3612': 'SMALL ENTER',
+    'keydown-3612': 'Small Enter',
 
-    'keyup-3613': 'RIGHT CTRL',
+    'keydown-3613': 'Ctrl',
 
-    'keyup-3637': '/',
+    'keydown-3637': '/',
 
-    'keyup-3639': 'PrtSc',
+    'keydown-3639': 'PrtSc',
 
-    'keyup-3640': 'RIGHT ALT',
+    'keydown-3640': 'Alt',
 
-    'keyup-3653': 'PAUSE',
+    'keydown-3653': 'PAUSE',
 
-    'keyup-3675': 'Window',
+    'keydown-3675': 'Window',
 
-    'keyup-3677': 'Document',
+    'keydown-3677': 'Document',
 
-    'keyup-61000': 'UP',
+    'keydown-61000': 'UP',
 
-    'keyup-61003': 'LEFT',
+    'keydown-61003': 'LEFT',
 
-    'keyup-61005': 'RIGHT',
+    'keydown-61005': 'RIGHT',
 
-    'keyup-61001': 'PAGE UP',
+    'keydown-61001': 'PAGE UP',
 
-    'keyup-61008': 'DOWN',
+    'keydown-61008': 'DOWN',
 
-    'keyup-61009': 'PAGE DOWN',
+    'keydown-61009': 'PAGE DOWN',
 
-    'keyup-61011': 'DELETE'
+    'keydown-61011': 'DELETE'
   }
 
 }
