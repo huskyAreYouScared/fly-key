@@ -100,7 +100,6 @@ export default {
   left: var(--left-offset);
   .animate {
     animation: moveIn 1.2s;
-    animation-iteration-count: 1;
   }
   .hidden {
     opacity: 0;
@@ -128,7 +127,7 @@ export default {
 .key-fly-skin{
   transition: all 1s;
   margin-bottom: 10px;
-  display: inline-block;
+  display: block;
   text-align: var(--key-fly-text-align);
   min-width: var(--key-fly-min-width);
   font-size: var(--key-fly-font-size);
